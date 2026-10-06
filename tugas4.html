@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 - JavaScript Interaktif</title>
+    <!-- Google Fonts & FontAwesome untuk ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="tugas4.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="header-mhs">
+            <div class="info">
+                <p><strong>Nama:</strong> Agusde Arya Weda Radja</p>
+                <p><strong>NIM:</strong> 255314039</p>
+            </div>
+            <img src="foto.JPG" alt="Foto Mahasiswa" onerror="this.src='https://via.placeholder.com/70x90?text=Foto'">
+        </div>
+
+        <h2>Tugas 4 - JavaScript</h2>
+
+        <!-- KOTAK UTAMA -->
+        <div id="app" class="card-box">
+            
+            <!-- LANGKAH 1: Input Nama & Jumlah Pilihan -->
+            <div id="step1" class="step-section active-step">
+                <div class="form-group">
+                    <label>Nama :</label>
+                    <input type="text" id="inputNama" placeholder="Masukkan Nama Anda">
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Pilihan :</label>
+                    <input type="number" id="inputJml" min="1" placeholder="Masukkan Jumlah Pilihan">
+                </div>
+                <button class="btn-custom" onclick="prosesLangkah1()">OK</button>
+            </div>
+
+            <!-- LANGKAH 2: Input Teks Pilihan Dinamis -->
+            <div id="step2" class="step-section">
+                <div id="containerPilihanInput"></div>
+                <button class="btn-custom" onclick="prosesLangkah2()">OK</button>
+            </div>
+
+            <!-- LANGKAH 3: Pemilihan Menggunakan Radio Button -->
+            <div id="step3" class="step-section">
+                <div class="form-group">
+                    <label class="label-title">Pilihan :</label>
+                    <div id="containerRadioPilihan" class="radio-container"></div>
+                </div>
+                <button class="btn-custom" onclick="prosesLangkah3()">OK</button>
+            </div>
+
+            <!-- LANGKAH 4: Input Email dengan Validasi Pattern -->
+            <div id="step4" class="step-section">
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="text" id="inputEmail" placeholder="Masukkan Email Anda">
+                </div>
+                <button class="btn-custom" onclick="prosesLangkah4()">OK</button>
+            </div>
+
+            <!-- LANGKAH 5: Output Akhir (DOM Manipulation) -->
+            <div id="step5" class="output-box" style="display: none;">
+                <p id="hasilAkhir"></p>
+                <button class="btn-custom btn-reset" onclick="location.reload()">Ulangi</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="tugas4.js"></script>
+</body>
+</html>
